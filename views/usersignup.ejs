@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-zinc-600">
+
+    <div class="flex justify-center items-center min-h-screen">
+        <!-- Sign up form -->
+        <section class="w-full max-w-4xl bg-white rounded-lg shadow-md p-8">
+            <div class="flex flex-col md:flex-row">
+
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-gray-700 mb-6">Sign up</h2>
+                    <form method="post" action="/register" id="registerForm"  class="space-y-4">
+
+                        <div class="flex items-center border-b border-gray-300 ">
+                            <i class="zmdi zmdi-account material-icons-name text-gray-400 text-xl mr-2"></i>
+                            <input type="text" name="name" placeholder="Your Name" 
+                                class="w-full outline-none px-2 py-1 text-gray-600 focus:ring-2 focus:ring-blue-400">
+                        </div>
+                        <div class="flex items-center border-b border-gray-300">
+                            <i class="zmdi zmdi-account material-icons-name text-gray-400 text-xl mr-2"></i>
+                            <input type="age" name="age" placeholder="Your Age" 
+                                class="w-full outline-none px-2 py-1 text-gray-600 focus:ring-2 focus:ring-blue-400">
+                        </div>
+                        <div class="flex items-center border-b border-gray-300 ">
+                            <i class="zmdi zmdi-email text-gray-400 text-xl mr-2"></i>
+                            <input type="tel" name="phone" placeholder="Mobile Number" 
+                                class="w-full outline-none px-2 py-1 text-gray-600 focus:ring-2 focus:ring-blue-400">
+                        </div>
+                        <div class="flex items-center border-b border-gray-300 ">
+                            <i class="zmdi zmdi-email text-gray-400 text-xl mr-2"></i>
+                            <input type="email" name="email" placeholder="Your Email" 
+                                class="w-full outline-none px-2 py-1 text-gray-600 focus:ring-2 focus:ring-blue-400">
+                        </div>
+                        <div class="flex items-center border-b border-gray-300 ">
+                            <i class="zmdi zmdi-lock text-gray-400 text-xl mr-2"></i>
+                            <input type="password" name="password" id="pass" placeholder="Password" 
+                                class="w-full outline-none px-2 py-1 text-gray-600 focus:ring-2 focus:ring-blue-400">
+                        </div>
+
+                        <div class="flex items-center border-b border-gray-300 ">
+                            <i class="zmdi zmdi-lock-outline text-gray-400 text-xl mr-2"></i>
+                            <input type="password" name="confirmPassword" id="re_pass" placeholder="Repeat your password" 
+                                class="w-full outline-none px-2 py-1 text-gray-600 focus:ring-2 focus:ring-blue-400">
+                        </div>
+                        <div id="error" class="text-red-500 items-center ">
+
+                        </div>
+
+                        <div class="mt-6">
+                            <input type="submit" value="Register" class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200">
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="md:w-1/2  md:mt-0 md:pl-8 flex flex-col items-center">
+                    <img src="./images/signuppage.png" alt="sign up image" class="w-3/4 mb-8">
+                    <a href="./login" class=" text-bold text-blue-500 hover:underline">I am already a member</a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+          const password = document.getElementById('pass').value;
+          const confirmPassword = document.getElementById('re_pass').value;
+          const errorDiv = document.getElementById('error');
+      
+          if (password !== confirmPassword) {
+            e.preventDefault(); // Prevent the form from submitting
+            errorDiv.style.display = 'block';
+            errorDiv.textContent = 'Passwords do not match!';
+          } else {
+            errorDiv.style.display = 'none';
+          }
+        });
+      </script>      
+</body>
+</html>

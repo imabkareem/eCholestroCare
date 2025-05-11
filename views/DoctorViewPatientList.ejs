@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Dashboard</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class=" bg-gray-100 h-screen w-90">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-3xl font-extrabold tracking-wide">eCholestroCare</h1>
+            <nav class="space-x-6">
+                <a href="/drDashboard" class="text-lg font-medium hover:underline transition duration-300">Home</a>
+                <a href="#" class="text-lg font-medium hover:underline transition duration-300">More</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container mx-auto mt-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Patient List</h2>
+        <div class="overflow-x-auto">
+            <table class="table-auto w-full border-collapse border border-gray-300 text-center">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="px-4 py-2 border border-gray-300">Name</th>
+                        <th class="px-4 py-2 border border-gray-300">Age</th>
+                        <th class="px-4 py-2 border border-gray-300">Phone Number</th>
+                        <th class="px-4 py-2 border border-gray-300">Email</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-4 py-2 border border-gray-300">Mukesh Sharma</td>
+                        <td class="px-4 py-2 border border-gray-300">30</td>
+                        <td class="px-4 py-2 border border-gray-300">9841236578</td>
+                        <td class="px-4 py-2 border border-gray-300">mukeshsharma@gmail.com</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-4 py-2 border border-gray-300">Bailram Shah</td>
+                        <td class="px-4 py-2 border border-gray-300">25</td>
+                        <td class="px-4 py-2 border border-gray-300">7485963214</td>
+                        <td class="px-4 py-2 border border-gray-300">bailramshah@gmail.com</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-4 py-2 border border-gray-300">Simran Gupta</td>
+                        <td class="px-4 py-2 border border-gray-300">24</td>
+                        <td class="px-4 py-2 border border-gray-300">7478965624</td>
+                        <td class="px-4 py-2 border border-gray-300">simrangupta@gmail.com</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-4 py-2 border border-gray-300">Ashutosh Pandey</td>
+                        <td class="px-4 py-2 border border-gray-300">23</td>
+                        <td class="px-4 py-2 border border-gray-300">7488522269</td>
+                        <td class="px-4 py-2 border border-gray-300">ashutoshpandey@gmail.com</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-4 py-2 border border-gray-300">Ruchi Kumar</td>
+                        <td class="px-4 py-2 border border-gray-300">36</td>
+                        <td class="px-4 py-2 border border-gray-300">8855479631</td>
+                        <td class="px-4 py-2 border border-gray-300">ruchikumar@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-600 text-white mt-8 py-32">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="m-2">
+                <h6 class="font-bold text-lg">eCholestroCare</h6>
+                <p class="text-sm mt-2">IIC, UDSC<br>South Campus, Moti Bagh<br>Delhi, India</p>
+                <p class="text-sm mt-2">Phone: +91 5599 55488<br>Email: info@falcon.com</p>
+            </div>
+            <div class="m-2">
+                <h6 class="font-bold text-lg">Useful Links</h6>
+                <ul class="text-sm mt-2 space-y-1">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">About us</a></li>
+                    <li><a href="#" class="hover:underline">Services</a></li>
+                    <li><a href="#" class="hover:underline">Terms of service</a></li>
+                    <li><a href="#" class="hover:underline">Privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="m-2 align-left">
+                <h6 class="font-bold text-lg">Our Social Networks</h6>
+                <p class="text-sm mt-2">Connect with us for more news and updates:</p>
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="text-white hover:text-gray-200">Twitter</a>
+                    <a href="#" class="text-white hover:text-gray-200">Facebook</a>
+                    <a href="#" class="text-white hover:text-gray-200">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

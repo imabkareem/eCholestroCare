@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Consultation</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.3.5/tailwind.css"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script> -->
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+   
+      <!-- Header -->
+    <header class="bg-gray-800 text-white py-3 px-6 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo and Title -->
+          <div class="flex items-center">
+              <img src="./images/logo.png" alt="Logo" class="h-10 w-10 rounded-full mr-3">
+              <h1 class="text-xl font-bold tracking-wide">eCholestroCare</h1>
+          </div>
+          <!-- Navigation -->
+          <nav>
+              <ul class="flex space-x-6">
+                  <li><a href="/patientHome" class="hover:text-blue-400 transition">Home</a></li>
+                  <li><a href="#" class="hover:text-blue-400 transition">About</a></li>
+                  <li><a href="#" class="hover:text-blue-400 transition">Services</a></li>
+                  <li><a href="#consultation" class="hover:text-blue-400 transition">Consult</a></li>
+                  <li><a href="#" class="hover:text-blue-400 transition">Reports</a></li>
+                  <li><a href="#" class="hover:text-blue-400 transition">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+    <!-- New Consultation Form Section -->
+    <section id="consultation" class="py-10 px-4">
+      <div class="container mx-auto bg-white shadow-md rounded-lg p-8 max-w-2xl">
+        <h2 class="text-3xl font-bold text-center mb-4">New Consultation</h2>
+        <h3 class="text-lg text-center text-gray-600 mb-6">LIPID PROFILE, BASIC, SERUM**</h3>
+
+        <!-- File Upload -->
+        <div class="mb-6">
+          <label for="pdfInput" class="block text-gray-700 font-medium mb-2">Upload Report File:</label>
+          <input id="pdfInput" type="file" class="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-300">
+        </div>
+
+        <!-- Dynamic Form Inputs -->
+        <form id="reportForm" action="/UserResult" method="post">
+          <input type="hidden" name="userId" value="<%= userId %>">
+
+          <% cholesterolLevels.forEach(level => { %>
+          <div class="mb-4">
+            <label for="<%= level %>" class="block text-gray-700 font-medium mb-2"><%= level %>:</label>
+            <input id="<%= level %>" type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-blue-300" name="cholesterolLevels[<%= level %>]" placeholder="Enter value">
+          </div>
+          <% }); %>
+
+          <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 focus:ring focus:ring-blue-300">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-6 mt-10">
+      <div class="container mx-auto text-center">
+        <p class="text-sm">&copy; 2025 HealthCare Portal. All rights reserved.</p>
+        <div class="mt-4 space-x-4">
+          <a href="#" class="hover:text-blue-300">Privacy Policy</a>
+          <a href="#" class="hover:text-blue-300">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    
+    </script>
+  </body>
+</html>

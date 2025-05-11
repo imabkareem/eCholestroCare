@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Signup</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 min-h-screen flex items-center justify-center py-12 px-4">
+  <div class="w-full max-w-5xl rounded-lg shadow-2xl bg-white bg-opacity-80 p-8">
+    <!-- Heading Section -->
+    <div class="text-center mb-12">
+      <img class="mx-auto h-20 w-auto" src="./images/loginpage.png" alt="Healthcare">
+      <h1 class="text-4xl font-extrabold text-indigo-700">Doctor Signup</h1>
+      <p class="mt-2 text-lg text-gray-700">
+        Please fill in your details to register and join our expert community.
+      </p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="flex flex-wrap justify-between items-center">
+      <!-- Form Section -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <form class="w-3/4 space-y-6 bg-white p-8 rounded-lg shadow-lg border border-indigo-200" action="/dregister" method="POST">
+          <input name="name" type="text" required placeholder="Your Full Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <input name="registrationNumber" type="text" required placeholder="Your Registration Number" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <input name="email" type="email" required placeholder="Your Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <input name="experience" type="number" required placeholder="Years of Experience" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <input name="expertise" type="text" required placeholder="Your Field of Expertise" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <input name="mobile" type="tel" required placeholder="Your Mobile Number" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <textarea name="query" rows="3" placeholder="Any questions or queries" class=" resize-none w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+          <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Sign Up
+          </button>
+        </form>
+      </div>
+
+      <!-- Image Section -->
+      <div class="w-full md:w-1/2 flex flex-col items-center justify-center">
+        <img src="./images/signuppage.png" alt="Sign up image" class="w-3/4 max-w-md rounded-lg shadow-lg">
+        <a href="./Drlogin" class="mt-12 text-indigo-600 text-lg font-semibold hover:underline">I am already an Expert Member</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

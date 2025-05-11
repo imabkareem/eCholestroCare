@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex justify-center items-center min-h-screen">
+        <section class="w-full max-w-4xl bg-white rounded-lg shadow-md p-8">
+            <div class="flex flex-col md:flex-row">
+
+                <div class="md:w-1/2 flex flex-col items-center">
+                    <img src="./images/loginpage.png" alt="login image" class="w-3/4 mb-4">
+                    <a href="./usersignup" class="text-blue-500 hover:underline">Create an account</a>
+                </div>
+
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-gray-700 mb-6">Login</h2>
+                    <form method="post" action="/login" class="space-y-4">
+                        <div class="flex items-center border-b border-gray-300 py-2">
+                            <i class="zmdi zmdi-account material-icons-name text-gray-400 text-xl mr-2"></i>
+                            <input type="email" name="email" placeholder="Email" 
+                                   class="w-full outline-none px-2 py-1 text-gray-600 focus:ring-2 focus:ring-blue-400" required>
+                        </div>
+                    
+                        <div class="flex items-center border-b border-gray-300 py-2">
+                            <i class="zmdi zmdi-lock text-gray-400 text-xl mr-2"></i>
+                            <input type="password" name="password" placeholder="Password" 
+                                   class="w-full outline-none px-2 py-1 text-gray-600 focus:ring-2 focus:ring-blue-400" required>
+                        </div>
+                    
+                        <div class="flex items-center">
+                            <input type="checkbox" name="remember-me" id="remember-me" class="mr-2">
+                            <label for="remember-me" class="text-gray-600">Remember Me</label>
+                        </div>
+                    
+                        <div class="mt-6">
+                            <input type="submit" value="Log in" 
+                                   class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200">
+                        </div>
+                    </form>
+                    
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
